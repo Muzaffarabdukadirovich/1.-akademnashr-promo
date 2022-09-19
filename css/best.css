@@ -12,6 +12,12 @@ letter-spacing: 1px;
 text-align: left;
 
 }
+
+
+
+.sitenav-item{
+  margin-right: 32px;
+}
 .hhr{
   padding:1em;
   list-style:hidden;
