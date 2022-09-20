@@ -1,24 +1,45 @@
+*{
+  box-sizing: border-box;
+}
 *:focus{
   outline: 2px dotted #ff7500;
 }
 header{
     background-color:#ffffff;
-    display:flex;
-    align-items:center;
     border-top: 5px solid #ff7500;
     padding-top: 16px;
     padding-bottom: 16px;
-    justify-content:space-between;
+    
      }
      .sitenav-links-right{
       display:flex;
      }
+     /* container styles   */
+   .container{
+    width: 100%;
+    max-width: 1140px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+   .site-header-container{
+
+   /* display flex ning header ga emas, balki uni ichidagi container nomli divga berilganini sababi shuki header dagi border top qisqarmasligi kk.  */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   }
 
 body{
   font-family: "roboto", sans-serif;
   font-size: 16px;
   line-height: 24px;
   letter-spacing:0.5px;
+  padding: 0;
+  margin: 0;
+  /* body va marginni olib tashlash bu tavsiya qilinadigan narsalardandir.  */
 }
 .sitenav-list{
 list-style: none;
@@ -67,7 +88,7 @@ list-style-type: none;
    
    .primary-button{
     font-size: 13px;
-    line-height: 15px;
+    line-height: 10px;
     background-color: #ff7500;
     color:#000;
     text-decoration: none;
@@ -95,14 +116,18 @@ list-style-type: none;
    .hero{
     background-color: #252420;
     color:#fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+   
     padding-top: 80px;
     padding-bottom: 80px;
    }
+   .hero-content-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
    .hero-content{
     width:390px;
+  
 
    }
    .orange-line{
@@ -117,6 +142,7 @@ list-style-type: none;
     width: 510px;
     height: 510px;
     border-radius:1em;
+    box-shadow: 24px 24px 0 0 rgba(255, 117, 0, 0.6);
    
    }
    .hero-heading{
@@ -165,17 +191,20 @@ list-style-type: none;
     justify-content: center;
     align-items: center;
     width: 100px;
+    margin-bottom: 32px;
     height: 100px;
    background-color: rgba(225,117,0,0.2);
    border-radius:50%;
    }
    .feature-heading{
+    margin-top: 0;
+    margin-bottom: 12px;
     font-size: 24px;
     line-height: 1.2;
     letter-spacing:0.5px;
     font-family: "roboto condensed",sans-serif;
     margin-top: 0;
-    margin-bottom: 72px;
+   
 
    }
 
@@ -184,15 +213,21 @@ list-style-type: none;
   .feature-item{
     width: 340px;
   }
+  .feature-info{
+    margin: 0;
+  }
   .sale-bg{
+  padding-top: 120px;
+  padding-bottom: 160px;
+  }
+  .sale-inner{
     background-color: #252420;
+    border-radius:12px;
     color:#ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-   border-radius:12;
-
-
+    padding: 64px;
   }
   .sale-content{
     width: 440px;
@@ -267,6 +302,12 @@ list-style-type: none;
     margin-top: 40px;
     margin-bottom: 64px;
     }
+    .site-footer-link-list li{
+      margin-bottom: 16px;
+    }
+    .site-footer-link-list li:last-child{
+      margin-bottom: 0;
+    }
     .site-footer-link-list a{
     text-decoration: none;
     color:#252420;
@@ -275,7 +316,7 @@ list-style-type: none;
 
     }
     .site-footer-link-list{
-        width: 224;
+        width: 224px;
         transition: opacity 0.4s ease, color 0.4s ease;
         padding: 0;
         margin: 0;
